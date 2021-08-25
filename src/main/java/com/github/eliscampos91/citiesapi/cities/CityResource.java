@@ -19,6 +19,4 @@ public class CityResource {
     public Page<City>cities(final Pageable page){
         return repository.findAll(page);
     }
-
-
 }

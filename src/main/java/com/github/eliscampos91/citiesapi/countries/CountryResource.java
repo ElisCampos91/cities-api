@@ -1,6 +1,5 @@
 package com.github.eliscampos91.citiesapi.countries;
 
-import com.github.eliscampos91.citiesapi.countries.Country;
 import com.github.eliscampos91.citiesapi.countries.repository.CountryRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
 
-
 @RestController
 @RequestMapping("/countries")
 public class CountryResource {
@@ -22,7 +20,6 @@ public class CountryResource {
     public CountryResource(CountryRepository repository) {
         this.repository = repository;
     }
-
 
     @GetMapping
     public Page<Country> countries(Pageable page){
@@ -38,6 +35,5 @@ public class CountryResource {
         }else{
             return ResponseEntity.notFound().build();
         }
-
     }
 }
